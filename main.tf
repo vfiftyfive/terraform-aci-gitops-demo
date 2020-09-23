@@ -15,7 +15,7 @@ provider "aci" {
   password = "${var.password}"
   url      = "${var.url}"
   insecure = true
-  version = "=0.3"
+  version  = "=0.3"
 }
 
 data "aci_tenant" "this" {
