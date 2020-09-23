@@ -3,7 +3,6 @@ variable "password" {}
 variable "url" {}
 variable "epg_name" {}
 
-
 locals {
   cluster_name     = "SJKube01"
   bd_name          = "aci-containers-SJKube01-pod-bd"
@@ -16,6 +15,7 @@ provider "aci" {
   password = "${var.password}"
   url      = "${var.url}"
   insecure = true
+  version = "=0.3"
 }
 
 data "aci_tenant" "this" {
